@@ -10,12 +10,12 @@ const TemperatureUtil = () => {
     function convert(temperature, unit) {
         if (temperature.unit == "CELSIUS" && unit == "FAHRENHEIT") {
             let convertedValue = (temperature.value * 9/5) + 32;
-            return new TemperatureVO(convertedValue, unit);
+            return new TemperatureVO(convertedValue, unit); //hasta aquí el 1er test
         } else if (temperature.unit == "FAHRENHEIT" && unit == "CELSIUS") {
             let convertedValue = (temperature.value - 32) * 5/9;
-            return new TemperatureVO(convertedValue, unit);
+            return new TemperatureVO(convertedValue, unit); //2do test
         } else {
-            return new TemperatureVO(temperature.value, unit);
+            return new TemperatureVO(temperature.value, unit);//3er test
         }
     }
 
